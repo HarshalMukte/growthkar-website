@@ -1,0 +1,83 @@
+.numberWrapper{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 24px 56px;
+gap: 20px;
+background: #131313;
+border: 2px solid #222222;
+border-radius: 50px;
+width: 100%;
+margin: 0px 10px;
+}
+.numberDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px 0;
+}
+.number{
+font-family: var(--font-plus-jakarta-sans);
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 116%;
+background: linear-gradient(90deg, #FFFFFF 8.96%, #020202 158.02%);
+background-clip: text;
+text-fill-color: transparent;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.title{
+font-weight: 500;
+font-size: 15px;
+line-height: 116%;
+color: #9B9B9B;
+}
+
+/* media queries */
+@media (max-width: 900px) {
+    .numberWrapper{
+        padding: 20px 50px;
+    }
+    .number{
+        font-size: 40px;
+    }
+}
+/* media queries */
+@media (max-width: 726px) {
+    .numberWrapper{
+        padding: 10px 25px;
+        align-items: flex-start;
+    }
+    .numberDiv{
+        text-align: center;
+        align-items: center;
+    }
+    .number{
+        font-size: 25px;
+    }
+    .title{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .numberWrapper{
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .numberDiv{
+        text-align: center;
+        align-items: center;
+        flex-basis: 40%;
+    }
+    .number{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 12px;
+    }
+}

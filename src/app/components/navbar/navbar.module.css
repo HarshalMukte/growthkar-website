@@ -1,0 +1,82 @@
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconImage{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+.growthKar{
+    font-size: 24px;
+}
+.buttonBorder{
+    background-color: #ffffff1e;
+    width: max-content;
+    padding: 6px;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.btn{
+    font-size: 14px;
+    color: #0e0e0e;
+    text-align: left;
+    cursor: pointer;
+    border: 0;
+    padding: 12px 24px;
+    background-color: #8956CB;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    white-space: nowrap;
+    font-weight: 600;
+    transition:  .3s ;
+    position: relative;
+    z-index: 2;
+}
+.buttonBorder::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 35px;
+    background-color: #8956CB;
+    transition: .4s;
+    z-index: 1;
+    opacity: 0;
+}
+.buttonBorder:hover::after{
+    width: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+.buttonBorder:hover button{
+    background-color: #020202f6;
+    color: #fff; 
+}
+
+@media (max-width: 500px) {
+    .iconImage{
+        height: 30px;
+        width: 30px;
+    }
+    .growthKar{
+        font-size: 18px;
+    }
+    .btn{
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}

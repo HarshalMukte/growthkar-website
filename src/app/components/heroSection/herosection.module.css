@@ -1,0 +1,268 @@
+.heroWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -45px;
+}
+
+/* left section css starts here */
+.leftSection,
+.rightSection {
+  flex-basis: 50%;
+  position: relative;
+}
+.leftSection{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+.leftSection .heroContent{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.leftSection .title {
+  font-size: 48px;
+  position: relative;
+  font-weight: 800;
+  font-family: inherit;
+  background: linear-gradient(
+    90.39deg,
+    #fff,
+    rgba(216, 216, 216, 0.62) 65.5%,
+    rgba(153, 153, 153, 0)
+  );
+  background-clip: text;
+   text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.leftSection .para{
+    color: #8B8B8B;
+    font-size: 20px;
+}
+.leftSection .downloadBtn{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.leftSection .downloadBtn > a{
+    cursor: pointer;
+    text-decoration: none; 
+}
+.leftSection .buttonBorder{
+    background-color: #ffffff1e;
+    width: max-content;
+    padding: 6px;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.leftSection .joinWaitlistBtn {
+    margin-top: 10px;
+}
+.leftSection .joinWaitlistBtn button{
+    font-size: 14px;
+    color: #0e0e0e;
+    text-align: left;
+    cursor: pointer;
+    border: 0;
+    padding: 12px 24px;
+    background-color: #8956CB;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    white-space: nowrap;
+    font-weight: 600;
+    transition:  .3s ;
+    position: relative;
+    z-index: 2;
+}   
+.buttonBorder::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 35px;
+    background-color: #8956CB;
+    transition: .4s;
+    z-index: 1;
+    opacity: 0;
+}
+.buttonBorder:hover::after{
+    width: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+.buttonBorder:hover button{
+    background-color: #020202f6;
+    color: #fff; 
+}
+.leftSection .textPara{
+    display: flex;
+    gap: 16px;
+}
+.leftSection .rode{
+    width: 8px;
+    position: relative;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.leftSection .para{
+    width: 100%;
+    max-width: 519px;
+    font-size: 20px;
+}
+.leftSection .para span{
+    color: #fff;
+    font-weight: bold;
+}
+.leftSection .element{
+    position: absolute;
+    z-index: 10;
+    width: max-content;
+    top: -8%;
+    right: -28%;
+    pointer-events: none;
+    animation: float 2s ease-in-out infinite alternate-reverse;
+}
+.leftSection .element img{
+    filter: drop-shadow(0px 0px 150px rgba(127, 117, 240, 0.4));
+
+}
+
+/* right section css starts here */
+.rightSection{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+}
+.rightSection .iphoneDiv{
+    position: relative;
+    width: 351.21px;
+    height: 729.07px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightSection .ellipseBlur{
+    position: absolute;
+    width: 130%;
+    height: 120%;  
+    border-radius: 50%;
+    background: rgba(150, 92, 205, 0.5);
+    filter: blur(200px);
+}
+.rightSection .iphoneDiv .frame{
+    width: 100%;
+    height: 100%;
+    background: url("/images/iphoneFrame.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightSection .iphoneDiv .screen{
+    position: absolute;
+    background: url("/images/iphone-15-pro.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center;
+    background-size: contain;
+    width: 90%;
+    height: 96%; 
+}
+.rightSection .userCard{
+    position: absolute;
+    top: 22%;
+    left: 25%;
+}
+.rightSection .UserCardWithDetials{
+    position: absolute;
+    bottom: 33%;
+    left: 18%;
+}
+.backContent {
+    padding: 25px;
+}
+
+
+/* animations */
+@keyframes float {
+    0%{
+        transform: translateY(-15px);
+    }100%{
+        transform: translateY(15px);
+
+    }
+}
+
+/* Styles for screens smaller than or equal to 768px */
+@media (max-width: 1150px) {
+    /* CSS rules */
+    .rightSection .iphoneDiv{
+        width: 330.21px;
+    }
+    .leftSection .title {
+        font-size: 44px;
+    }
+    .leftSection .downloadBtn > a img{
+        width: 90%;
+    }
+  
+}
+
+@media (max-width: 950px) {
+
+    .heroWrapper {
+        flex-direction: column;
+    }
+    .leftSection .title {
+        font-size: 30px;
+    }
+    .leftSection{
+        gap: 50px;
+    }
+    .rightSection .iphoneDiv{
+        margin-top: 50px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .leftSection .element{
+        scale: .7;
+        right: -50%;
+    }
+    .leftSection .joinWaitlistBtn button{
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+    .leftSection .para{
+        font-size: 16px;
+    }
+    .leftSection .heroContent .para{
+        font-size: 14px;
+    }
+    .rightSection{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightSection .iphoneDiv{
+        max-width: 280px;
+        width: 90%;
+    }
+
+}

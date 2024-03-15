@@ -1,0 +1,97 @@
+.objectiveSectionWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 10px;
+  position: relative;
+}
+.objSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 22px;
+  width: 1038px;
+}
+.content{
+  width: 100%;
+}
+.objSection .heading h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 116%;
+  text-align: center;
+  font-family: var(--font-plus-jakarta-sans);
+  color: #8956CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.objSection .heading h2 span {
+  color: #8956CB;
+  font-size: 30px;
+}
+.content{
+  position: relative;
+}
+.objSection .para{
+  font-family: var(--font-plus-jakarta-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 116%;
+  text-align: center;
+  color: #8B8B8B;
+}
+.objSection .para span{
+  color: #DFDFDF;
+}
+/* for masking the back div */
+.backContent{
+  width: 100%;
+  height: calc(100% + 100px);
+  pointer-events: none;
+  position: absolute;
+  mask-image: url("/images/circle.svg");
+  background-color: #8956CB;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 40px;
+  color: #000;
+  transition: mask-size .3s;
+  overflow: hidden;
+}
+.backContent .para{
+  color: #000;
+}
+.backContent .heading h2, .backContent .heading h2 span{
+  color: #DFDFDF;
+}
+
+/* media queries */
+@media (max-width: 1050px) {
+  .objectiveSectionWrapper{
+    padding: 45px 10px;
+  }
+}
+@media (max-width: 760px) {
+  .objSection .heading h2 {
+    font-size: 18px;
+  }
+  .objSection .para{
+    font-size: 26px;
+  }
+}
+@media (max-width: 500px) {
+  .objSection .para{
+    font-size: 20px;
+  }
+  .objSection {
+    padding: 0px;
+  }
+  .objectiveSectionWrapper{
+    padding: 0px 10px;
+  }
+}
