@@ -57,10 +57,10 @@ const ObjectiveSection = () => {
         </div>
         <div className={styles.content}>
           <p className={styles.para}>
-            I'm Harshal, a web developer passionate about crafting intuitive and
+            I&apos;m Harshal, a web developer passionate about crafting intuitive and
             engaging online experiences. With a focus on front-end development,
             I take pride in creating visually appealing websites and
-            applications. Let's team up to bring your digital ideas to life!
+            applications. Let&apos;s team up to bring your digital ideas to life!
           </p>
         </div>
       </div>
